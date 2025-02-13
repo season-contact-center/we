@@ -8,7 +8,7 @@ const TonWallet = () => {
   // Функция для открытия Ton Space и получения адреса
   const connectWallet = async () => {
     try {
-      const wallets = await tonConnectUI.connectWallet(); // Запрос подключения кошелька
+      const wallets = await tonConnectUI.openModal(); // Запрос подключения кошелька
       if (wallets?.account?.address) {
         setWalletAddress(wallets.account.address); // Установка адреса в состояние
       }
